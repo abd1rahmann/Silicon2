@@ -1,0 +1,19 @@
+.breadcrumb{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breadcrumb-component{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .breadcrumb-link{
+    color: $primary;
+    transition: 0.3s ease-in;
+    &:hover{
+      color: $secondary;
+    }
+  }
+}

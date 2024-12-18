@@ -1,0 +1,141 @@
+#contact-bg {
+  background-color: $gray-100;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include lg {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding-right: 50px;
+    @include lg{
+      width: 100%;
+      padding: 50px;
+    }
+    @include md{
+      padding: 0;
+    }
+    .contact-section{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      .contact-form-icon{
+        display: flex;
+        place-self: start;
+        @include icon-rounded;
+      }
+    }
+
+    @include lg{
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      h1{
+        grid-row: 1;
+      }
+      h2{
+        padding-bottom: 20px;
+      }
+      #email-us{
+        grid-row: 2;
+      }
+      #careers{
+        grid-row: 2;
+      }
+    }
+    @include md{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 24px;
+    @include border-l;
+    padding: 72px;
+    height: 90%;
+    @include mobile{
+      padding: 20px;
+    }
+    @include shadow-l;
+
+    @include lg{
+      margin-top: 100px;
+      width: 65%;
+    }
+    @include sm{
+      padding: 40px 20px;
+      width: 90%;
+    }
+  }
+  .contact-form-span{
+    color: $danger;
+    background-color: #fde8e8;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-top: 2px;
+    width: fit-content;
+  }
+
+
+  .contact-section-body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    max-width: 450px;
+
+    a {
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+
+
+.contact-specialist-field {
+  width: 100%;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px $gray-400 solid;
+  @include text-m;
+  margin-bottom: 5px;
+  height: 52px;
+  padding-left: 16px;
+}
+
+.contact-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+#contact-form-date-time{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  @include sm{
+    grid-template-columns: 1fr;
+  }
+}
+
+#contact-form-dropdown{
+  span{
+    color: $danger;
+  }
+}

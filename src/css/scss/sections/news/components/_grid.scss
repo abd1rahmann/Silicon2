@@ -1,0 +1,19 @@
+.grid-container{
+  display: grid;
+  gap: 40px;
+}
+
+#news-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 24px;
+  @include lg{
+    grid-template-columns: 1fr 1fr;
+  }
+  @include md{
+    grid-template-columns:auto;
+  }
+  @include sm{
+    grid-template-columns: auto;
+  }
+}

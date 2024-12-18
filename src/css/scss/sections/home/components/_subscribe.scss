@@ -1,0 +1,32 @@
+.subscriber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 72px 110px;
+  @include lg {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding: 20px;
+  }
+  @include sm {
+    padding: 15px 5px;
+    gap: 20px;
+  }
+
+  background-color: $gray-300;
+  border-radius: 15px;
+
+  span {
+    display: flex;
+    flex: 1;
+    @include sm{
+      flex-direction: column;
+    }
+    gap: 20px;
+    align-items: center;
+    max-width: 750px;
+  }
+}
+

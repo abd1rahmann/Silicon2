@@ -1,0 +1,72 @@
+.news-card{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 24px;
+  @include shadow-s;
+  border-radius: 8px;
+  position: relative;
+}
+.news-card-image{
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.news-card-image-bookmark{
+  padding: 9px;
+  border-radius: 50%;
+  background: $white;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  &:hover{
+    cursor: pointer;
+    background: $gray-200;
+  }
+  &.active{
+    background: $success;
+  }
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 24px;
+}
+
+.card-heading-category{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+  background: $gray-200;
+  border-radius: 4px;
+  p{
+    color: $gray-800;
+  }
+}
+
+.card-heading-date{
+  @include text-s;
+  color: $gray-600;
+}
+
+.card-data{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 24px;
+}
+
+#card-divider{
+  background: $gray-300;
+  height: 1px;
+}
+
+.card-author{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+}

@@ -1,0 +1,159 @@
+#footer-dark-bg {
+  background-color: $gray-900;
+}
+
+@include lg {
+  #footer-dark {
+    grid-row: 3;
+  }
+}
+
+#footer-dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  #footer-links {
+    display: grid;
+    gap: 20px;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include lg {
+      grid-template-columns: 1fr;
+      place-items: start;
+
+      #test-header {
+        display: grid;
+      }
+      .site-links {
+        display: none;
+      }
+      #footer-contact {
+        display: none;
+      }
+    }
+  }
+
+  #footer-dark-subscription {
+    @include lg{
+      margin-top: 10px;
+    }
+    #footer-text {
+      max-width: 80%;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  #footer-subscribe {
+    display: flex;
+
+    #dark-copyright {
+      @include text-xs;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .site-links {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  #footer-contact {
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    color: $gray-100;
+  }
+
+  h6 {
+    padding-top: 40px;
+    @include text-s;
+    color: $gray-100;
+  }
+
+  input {
+    border-radius: 5px 0 0 5px;
+    background-color: $gray-900;
+    border: 1px rgba(255, 255, 255, 0.18) solid;
+  }
+}
+
+#dark-footer-mobile-accordion {
+  .dark-footer-accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  display: none;
+  @include lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    grid-row: 1;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .accordion-header {
+    display: flex;
+    gap: 20px;
+
+    button {
+      padding: 0;
+      p {
+        @include text-m;
+        color: $white;
+        display: flex;
+        gap: 20px;
+      }
+      background-color: $gray-900;
+    }
+    align-items: center;
+  }
+
+  .social-links-accordion {
+    display: none;
+
+    ul {
+      display: grid;
+    }
+
+    &.active {
+      display: grid;
+    }
+
+    &.inactive {
+      display: none;
+    }
+  }
+
+  .internal-links-accordion {
+    padding-bottom: 20px;
+    ul {
+      display: grid;
+    }
+
+    &.active {
+      display: grid;
+      p{
+        padding-top: 20px;
+        color: $white;
+      }
+    }
+
+    &.inactive {
+      display: none;
+    }
+  }
+}

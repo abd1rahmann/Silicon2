@@ -1,0 +1,49 @@
+a, .nav-link, Link{
+  text-decoration: none;
+  transition: ease-in 0.1s;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.nav-link {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.Link{
+  color: $gray-100;
+  &:hover{
+    color: $primary;
+  }
+}
+
+.social-media-link {
+    i:hover {
+      color: white;
+      cursor: pointer;
+    }
+}
+
+.email-link{
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+#facebook:hover {
+  background-color: #316FF6;
+}
+
+#twitter:hover {
+  background-color: #1CA1F2;
+}
+
+#instagram:hover {
+  background: linear-gradient(135deg, #833AB4, #E1306C, #FCAF45);
+}
+
+#youtube:hover {
+  background-color: #FF0000;
+}

@@ -1,0 +1,225 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .site-navigation {
+    display: flex;
+    align-items: center;
+
+    #logo {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      @include lg {
+        gap: 20px;
+      }
+    }
+  }
+
+  .site-settings {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hamburger-menu {
+      display: none;
+    }
+  }
+
+  @include lg {
+    .site-settings {
+      #sign-in-button {
+        display: none;
+      }
+
+      #theme-mode {
+        display: none;
+      }
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+
+      .hamburger-menu {
+        display: block;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include md {
+    #menu {
+      display: none;
+    }
+  }
+}
+
+#mobile-menu {
+  @include rest {
+    display: none;
+  }
+  @include xxl {
+    display: none;
+  }
+  @include xl {
+    display: none;
+  }
+  @include lg {
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10px;
+    gap: 10px;
+
+    .mobile-item.hidden-lg {
+      display: none;
+    }
+
+    #mobile-sign-in-button{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      i{
+        @include lg{
+          font-size: 1rem;
+        }
+        @include md{
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .mobile-item {
+      background-color: $primary;
+      color: white;
+      border-radius: 6px;
+      display: flex;
+      padding: 12px;
+
+      .mobile-item {
+        width: 200px;
+        height: 200px;
+      }
+
+
+      .nav-link {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      &.active {
+        background-color: #170442;
+        transition: 1s ease-in;
+      }
+
+      &.inactive {
+        transition: 1s ease-in;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+
+      #mobile-sign-in-icon {
+        display: inline-block;
+      }
+      #mobile-sun {
+        color: yellow;
+        text-shadow: 0 0 20px yellow;
+      }
+
+      #mobile-moon {
+        color: #c8faff;
+        text-shadow: 1px 1px 7px #b5d4da;
+      }
+    }
+  }
+
+  @include md {
+    background-color: $gray-200;
+    border-radius: 12px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    padding: 30px 0;
+
+    .mobile-item.hidden-lg {
+      display: flex;
+    }
+
+    .nav-link.mobile-item.hidden-lg{
+      display: flex;
+      flex-direction: column;
+
+      i {
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+      p{
+        margin-top: 5px;
+      }
+    }
+    .mobile-item {
+      &:hover {
+        cursor: pointer;
+      }
+
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include shadow-primary;
+      border-radius: 20px;
+
+      .nav-link {
+        display: flex;
+        flex-direction: column;
+        i {
+          display: grid;
+          place-items: center;
+          font-size: 2rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+#mobile-sign-in-button{
+  display: flex;
+  flex-direction: column;
+  i {
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  p{
+    margin-top: 5px;
+  }
+}
+
+#news-navbar{
+  @include shadow-s;
+  padding-bottom: 16px;
+}
