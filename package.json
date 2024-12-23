@@ -1,16 +1,20 @@
 {
   "name": "silicon",
+  "homepage": "https://github.com/abd1rahmann/Silicon2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.2.0",
     "vite": "^6.0.3"
   },
   "dependencies": {
